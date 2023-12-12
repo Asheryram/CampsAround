@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Camps Around</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.camp-card {
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+}
+
+form {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+    <header style="padding-left: 24px; border-top-left-radius: 20px;">
+            <h1 style=" color: #484848; font-size: 35px; font-family: Montserrat; font-weight: 800; word-wrap: break-word">CampsAround</h1>
+    </header>
+    <main>
+        <section style="width: auto; height: auto; display: flex; justify-content: space-between; gap: 10px;">
+            <div style="min-width: 669px; height: 540px;   background: url('campMain.avif') center/cover; border-radius: 16px; position: relative;">
+                <article style="width: 100%; height: 100%; display: flex; position: absolute;top: 400px; left: 40px;">
+                    <div style="width: 76px; height: 76px;  background: url('profileA.avif') center/cover; border-radius: 9999px; "></div>
+                    <p style="padding-left: 12px;">
+                        <span style="color: #484848; font-size: 12px; font-family: Montserrat; font-weight: 500; word-wrap: break-word; display: block;">Listed By:</span>
+                        <span style="width: 155px; height: 23px;  color: #484848; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word;display: block; ">John Doberman</span>
+                        <span style="width: 175px; height: 23px;  color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 500; word-wrap: break-word;display: block;">For:  $ 1000  -  $ 5000</span>
+
+                    </p>
+                </article>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2 ,1fr); gap: 10px;">
+
+                <div style="min-width: 315px; height: 260px;   background: url('campA.webp') center/cover; border-radius: 8px"></div>
+                <div style="max-width: 315px; height: 260px;  background: url('campB.webp') center/cover; border-radius: 8px"></div>
+                <div style="max-width: 315px; height: 260px;    background: url('campC.webp') center/cover; border-radius: 8px"></div>
+                <div style="min-width: 315px; height: 260px; ; position: relative;  background: url('campD.webp') center/cover; border-radius: 8px; display: flex; justify-content: center; ">
+                   
+                    <div style="margin: 80px 0; display: inline-flex;">
+                        <span style="color: #484848; font-size: 48px; font-family: Montserrat; font-weight: 700; word-wrap: break-word ; margin-top: 10px; margin-right: 5px;">+2</span>
+                        <p style="color: #484848; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">More <br> Photos</p>
+                    </div>
+                     
+                
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+       
+
+<div style="display: flex;">
+        <section style="width: 50%; height: 100%; position: relative;">
+            <article>
+                <h2 style="width: 423px;   color: #484848; font-size: 28px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Camps Around</h2>
+                <h3 style="width: 215px; height: 39px;  color: #9A9A9A; font-size: 16px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Friderikou Tsentner 28, Athina 115 25, Greece</h3>
+            </article> 
+<div style=" display: grid; grid-template-columns: repeat(4,1fr); gap: 10px;">
+    <div style="width: 176px; height: 160px; background: #EFF0F2; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="/bed.png" alt="bed image" style="height: 20px;">
+        <p style="color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">3 Bedrooms</p>
+    </div>
+    <div style="width: 176px; height: 160px; background: #EFF0F2; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="/bath.png" alt="bed image" style="height: 20px;">
+        <p style="color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">2 Bathrooms</p>
+    </div>
+    <div style="width: 176px; height: 160px; background: #EFF0F2; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="/car.png" alt="bed image" style="height: 20px;">
+        <p style="color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">3 Cars/2 Bikes</p>
+    </div>
+    <div style="width: 176px; height: 160px; background: #EFF0F2; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <img src="/pet icon.png" alt="bed image" style="height: 20px;">
+        <p style="color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 600; word-wrap: break-word">0 Pets Allowed</p>
+    </div>
+    
+</div>
+
+<article>
+    <h2 style="width: 100%; height: 100%; color: #484848; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Camp Description</h2>
+    <h3
+     style="width: 100%; height: 100%; color: #9A9A9A; font-size: 15px; font-family: Montserrat; font-weight: 400; line-height: 20px; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
+    <h3 style="width: 100%; height: 100%; color: #9A9A9A; font-size: 15px; font-family: Montserrat; font-weight: 400; line-height: 20px; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
+</article>
+
+
+<section>
+    <h2 style="width: 100%; height: 100%; color: #484848; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Available Amenities<br/></h2>
+
+    <div style="display: grid; grid-template-columns: repeat(2,1fr);">
+        <p style="display: inline-flex;"> <img src="/kitchen.png" alt=" call image" style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+            Kitchen
+         </span>
+        </p>
+        <p style="display: inline-flex;"> <img src="/tv.png" alt=" call image" style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+            Television with Netflix
+         </span>
+        </p>
+        <p style="display: inline-flex;"> <img src="/ac.png" alt=" call image" style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+            Air Conditioner
+         </span>
+        </p>
+        <p style="display: inline-flex;"> <img src="/wifi.png" alt=" call image" style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+            Free Wireless Internet
+         </span>
+        </p>
+        <p style="display: inline-flex;"> <img src="/laundry 1.png" alt=" call image" style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+            Weather
+         </span>
+        </p>
+        <p style="display: inline-flex;"> <img src="/balcony 1.png" alt=" call image" style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+            Balcony/Patio
+         </span>
+        </p>
+    </div>
+    <button role="button" style="width: 242px; height: 60px; color: #484848; background: white; border-radius: 6px; border: 1px #484848 solid">Show All 10 Amenities</button>
+
+</section>
+
+
+<section>
+    <h2 style="width: 100%; height: 100%; color: #484848; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Safety and Hygiene<br/></h2>
+
+    <div style="display: grid; grid-template-columns: repeat(2,1fr);">
+        <p style="display: inline-flex;"> <img src="/healthicons_health-data-security-outline.png" alt=" cleaning image"  style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+          Daily Cleaning
+         </span>
+        </p>
+        <p style="display: inline-flex;"> <img src="/healthicons_health-data-security-outline.png" alt=" Extinguishers image"  style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+           Fire Extinguishers
+         </span>
+        </p>
+        <p style="display: inline-flex;"> <img src="/healthicons_health-data-security-outline.png" alt=" Disinfectionsimage"  style="width: 20px; height: 20px; margin-right: 10px;"> <span>
+          Disinfections and Sterilizations
+         </span>
+        </p>
+        <p style="display: inline-flex;"> <img src="/healthicons_health-data-security-outline.png" alt=" smoke Detectors" style="width: 20px; height: 20px; margin-right: 10px;" > <span>
+            Smoke Detectors
+         </span>
+        </p>
+    </div>
+   
+</section>
+<sectiom style="position: relative;">
+<img src="/Lovation MArker.png" alt="marker" style="position: absolute; left: 400px; top: -300px;">
+    <img src="/Map-Placeholder@2x 2.png" alt="map" style="height: 447px; width: 845px;">
+</sectiom>
+
+<section>
+    <h2 style="width: 100%; height: 100%; color: #484848; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Nearby Services</h2>
+    <div style="display: flex; gap: 10px;">
+
+        <div style="width: 242px; height: 106px; background: white; box-shadow: 0px 0px 8px rgba(194, 198, 204, 0.50); border-radius: 6px; padding: 8px;">
+            <p style=" color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Grill Restro & Bar</p>
+            <p style=" color: #9A9A9A; font-size: 14px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">100 meters away</p>
+        <img src="five stars.png" alt="stars">
+        </div>
+        <div style="width: 242px; height: 106px; background: white; box-shadow: 0px 0px 8px rgba(194, 198, 204, 0.50); border-radius: 6px; padding: 8px;">
+            <p style=" color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Grill Restro & Bar</p>
+            <p style=" color: #9A9A9A; font-size: 14px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">100 meters away</p>
+        <img src="five stars.png" alt="stars">
+        </div>
+        <div style="width: 242px; height: 106px; background: white; box-shadow: 0px 0px 8px rgba(194, 198, 204, 0.50); border-radius: 6px; padding: 8px;">
+            <p style=" color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Grill Restro & Bar</p>
+            <p style=" color: #9A9A9A; font-size: 14px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">100 meters away</p>
+        <img src="five stars.png" alt="stars">
+        </div>
+    </div>
+    <button style="width: 189px; height: 54px; background: #9A9A9A; border-radius: 26px; margin-top: 20px; color: white;">Show On Map</button>
+</section>
+
+<div>
+   
+        <p style=" color: #484848; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word; display: inline-flex;">Reviews
+            <img src="/star.png" alt="star image" width="20px" height="20px" style="margin: 0 10px;">
+            <span style=" color: #484848; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">5.0</span>
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(2,1fr);">
+            <div style="display: flex;">
+                <p style="margin-right: 10px;">Amenities</p>
+                        <div style="width: 135px; height: 4px; background: #9A9A9A; border-radius: 2px ;margin-top:24px ; "></div>
+                        <p style="margin-left: 10px;">5.0</p>
+            </div>
+            <div style="display: flex;">
+                <p style="margin-right: 10px;">Hygiene</p>
+                        <div style="width: 135px; height: 4px; background: #9A9A9A; border-radius: 2px ;margin-top:24px ; "></div>
+                        <p style="margin-left: 10px;">5.0</p>
+            </div>
+            <div style="display: flex;">
+                <p style="margin-right: 10px;">Communication</p>
+                        <div style="width: 135px; height: 4px; background: #9A9A9A; border-radius: 2px ;margin-top:24px ; "></div>
+                        <p style="margin-left: 10px;">5.0</p>
+            </div>
+            <div style="display: flex;">
+                <p style="margin-right: 10px;">Location of Property</p>
+                        <div style="width: 135px; height: 4px; background: #9A9A9A; border-radius: 2px ;margin-top:24px ; "></div>
+                        <p style="margin-left: 10px;">5.0</p>
+            </div>
+            <div style="display: flex;">
+                <p style="margin-right: 10px;">Value for Money</p>
+                        <div style="width: 135px; height: 4px; background: #9A9A9A; border-radius: 2px ;margin-top:24px ; "></div>
+                        <p style="margin-left: 10px;">5.0</p>
+            </div>
+        
+        </div>
+
+        <h2 style="width: 100%; height: 100%; color: #484848; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Feedbacks<br/></h2>
+
+<div  id="feedbackList" style="display: grid; grid-template-columns: repeat(2,1fr);">
+<!-- 
+    <article style="width: 382px;">
+        <div style=" display: flex;">
+            <div style="width: 76px; height: 76px;  background: gray; border-radius: 9999px; "></div>
+            <div style="padding-left: 12px;">
+                <h2 style="  color: #484848; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word; display: block; ">John Doberman</h2>
+                <h3 style="  color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 500; word-wrap: break-word; display: block;">Mar 12 2023</h3>
+            </div>
+        </div>
+<h4 style=" color: #9A9A9A; font-size: 15px; font-family: Montserrat; font-weight: 400; line-height: 20px; word-wrap: break-word">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+    </article> 
+-->
+
+
+</div>
+
+       
+<button style="width: 242px; height: 60px; color: #484848; background: white; border-radius: 6px; border: 1px #484848 solid">Show All 100 Reviews</button>
+    
+
+
+</section>
+
+
+
+
+        </section>
+        <section style="width: 50%; height: 100%; position: relative; ">
+            <div style="width: 382px; height: 100%; background: white; box-shadow: 0px 0px 16px rgba(194, 198, 204, 0.60); border-radius: 10px; margin:auto; padding: 20px; margin-top: 20px;">
+                <p style="width: 100%; height: 100%; color: #484848; font-size: 22px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">$ 1000 - $ 2000</p>
+                <div style="width: 100%; height: 100%; border: 1px #E0E2E6 solid"></div>
+                <p style="width: 100%; height: 100%; color: #9A9A9A; font-size: 16px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Short Period: $ 1000</p>
+                <p style="width: 100%; height: 100%; color: #9A9A9A; font-size: 16px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Medium Period: $ 2000</p>
+                <p style="width: 100%; height: 100%; color: #9A9A9A; font-size: 16px; font-family: Montserrat; font-weight: 500; word-wrap: break-word">Long Period: $ 2000</p>
+                <button onclick="bookNow('Camp1')" style="width: 324px; height: 100%; background: #484848; border-radius: 30px; margin: 20px;">
+                    <p style="width: 100%; height: 100%; color: white; font-size: 15px; font-family: Montserrat; font-weight: 700; word-wrap: break-word">Book Now</p>
+                </button>
+                <p style="display: inline-flex; margin-right: 10px;"> <img src="/heroicons-outline_office-building.png" alt="office image">
+                    Property Inquiry
+                
+                </p>
+                <p style="display: inline-flex;"> <img src="/fluent_call-16-regular.png" alt=" call image" > <span>
+                    Contact Host
+                 </span>
+                </p>
+                    
+                
+            
+            </div>
+
+        </section>
+    </div>
+
+
+   <form id="feedbackForm" onsubmit="submitFeedback(document.getElementById('username').value, document.getElementById('feedback').value, 'Camp1'); return false;"> 
+    <h2>User Feedback Form</h2>
+           <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+</main>
+<div id="customModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modalMessage"></p>
+    </div>
+</div>
+<!-- <script src="index.js"></script> -->
+<script>
+    let CampMockDatabase = [
+	{
+		name: "Camp1",
+		booked: 0,
+		vacancies: 1,
+		feedback: [
+			{
+				feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				timestamp: "Fri Dec 07 2023",
+				username: "John Doberman",
+			},
+			{
+				feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				timestamp: "Fri Dec 07 2023",
+				username: "John Doberman",
+			},
+			{
+				feedback: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+				timestamp: "Fri Dec 07 2023",
+				username: "John Doberman",
+			},
+		],
+	},
+	{
+		name: "Camp2",
+		booked: 0,
+		vacancies: 10,
+		feedback: [],
+	},
+];
+
+window.onload = function () {
+    displayTopFeedbacks('Camp1'); 
+};
+function bookNow(campName) {
+	let camp = CampMockDatabase.find((camp) => camp.name === campName);
+
+	if (camp && camp.booked < camp.vacancies) {
+		camp.booked += 1;
+		openModal(`${campName} booked successfully!`);
+	} else if (camp) {
+		openModal(`${campName} is full. No vacancies available.`);
+	}
+}
+
+function displayTopFeedbacks(campName) {
+	let camp = CampMockDatabase.find((camp) => camp.name === campName);
+
+	if (camp && camp.feedback.length > 0) {
+		camp.feedback.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+		const top3Feedbacks = camp.feedback.slice(0, 3);
+
+		const feedbackListElement = document.getElementById("feedbackList");
+		feedbackListElement.innerHTML = "";
+
+		top3Feedbacks.forEach((feedback) => {
+			const feedbackItem = document.createElement("div");
+			feedbackItem.innerHTML = `<article style="width: 100%;">
+                <div style="display: flex;">
+                    <div style="width: 76px; height: 76px; background: gray; border-radius: 50%;"></div>
+                    <div style="padding-left: 12px;">
+                        <h2 style="color: #484848; font-size: 18px; font-family: Montserrat; font-weight: 700; word-wrap: break-word; display: block;">${feedback.username}</h2>
+                        <h3 style="color: #484848; font-size: 16px; font-family: Montserrat; font-weight: 500; word-wrap: break-word; display: block;">${feedback.timestamp}</h3>
+                    </div>
+                </div>
+                <h4 style="color: #9A9A9A; font-size: 15px; font-family: Montserrat; font-weight: 400; line-height: 20px; word-wrap: break-word">${feedback.feedback}</h4>
+            </article>`;
+			feedbackListElement.appendChild(feedbackItem);
+		});
+	}
+}
+
+function submitFeedback(username, feedback, campName) {
+	let camp = CampMockDatabase.find((camp) => camp.name === campName);
+
+	if (camp) {
+		const timestamp = new Date().toDateString();
+		const feedbackObj = { username, feedback, timestamp };
+		camp.feedback.push(feedbackObj);
+		openModal("Feedback submitted successfully!");
+	}
+	displayTopFeedbacks(campName);
+}
+
+function openModal(message) {
+	document.getElementById("modalMessage").textContent = message;
+	document.getElementById("customModal").style.display = "block";
+}
+
+function closeModal() {
+	document.getElementById("customModal").style.display = "none";
+}
+
+window.onclick = function (event) {
+	const modal = document.getElementById("customModal");
+	if (event.target === modal) {
+		modal.style.display = "none";
+	}
+};
+
+</script>
+</body>
+</html>
